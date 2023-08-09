@@ -29,5 +29,6 @@ namespace School_Project
         public virtual DbSet<Department> Department { get; set; }
         public virtual DbSet<Staff> Staff { get; set; }
         public virtual DbSet<Student> Student { get; set; }
+        public virtual DbSet<Teacher> Teacher { get; set; }
     }
 }
