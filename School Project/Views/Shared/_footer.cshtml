@@ -1,6 +1,6 @@
 ﻿<style>
     .site-footer {
-        background-color: #f4f4f4;
+        background-color:dimgray;
         padding: 20px 0;
         text-align: center;
     }
@@ -17,7 +17,7 @@
     .footer-links a {
         margin: 0 15px;
         text-decoration: none;
-        color: #333;
+        color:black;
         font-size: large;
     }
 
@@ -28,8 +28,8 @@
 <footer class="site-footer">
     <div class="container">
         <div class="footer-links">
-            <a href="~/SomePages/AboutUs.html"><b>About Us</b></a>
-            <a href="~/SomePages/ContactUs.html"><b>Contact Us</b></a>
+            <a href="@Url.Action("About","Home")"><b>About Us</b></a>
+            <a href="@Url.Action("Contact","Home")"><b>Contact Us</b></a>
         </div>
         <p>&copy; All Rights are reserved by हाम्रो स्कुल.</p>
     </div>

@@ -1,6 +1,5 @@
-﻿<style>
-</style>
-<div class="sidebar" style="background:gray; height: 65vh; width: 20%;">
+﻿
+<div class="sidebar" style="background:gray; height: 65vh;width:20%;  margin:10px">
     <header style="font-size: 24px; text-align: center; padding: 10px;">Hamro School</header>
     <ul style="list-style: none; padding: 0;">
         <li style="margin-bottom: 10px; padding: 10px; border-radius: 5px; text-align: center;">
@@ -8,29 +7,29 @@
                href="#">Introduction</a>
         </li>
         <li style="margin-bottom: 10px; padding: 10px; border-radius: 5px; text-align: center;">
-        
-                <a style="text-decoration: none; color: black; display: block; background-color: #eee; padding: 5px 0;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Set Up
-                </a>
-              
+
+            <a style="text-decoration: none; color: black; display: block; background-color: #eee; padding: 5px 0;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Set Up
+            </a>
+
             <div class="collapse" id="collapseExample">
                 <div class="card card-body">
-                    <ul style="list-style: none; padding:10;">
+                    <ul style="list-style: none; padding:10px;">
                         <li style="margin-bottom: 20px; padding: 5px; border-radius: 5px; text-align: center;">
                             <a style="text-decoration: none; color: black; display: block; background-color: #eee; padding: 5px 0;"
-                               href="#">Student</a>
+                               href="@Url.Action("Student","Student")">Student</a>
                         </li>
                         <li style="margin-bottom: 5px; padding: 5px; border-radius: 5px; text-align: center;">
                             <a style="text-decoration: none; color: black; display: block; background-color: #eee; padding: 5px 0;"
-                               href="#">Course</a>
+                               href="@Url.Action("Course","Course")">Course</a>
                         </li>
                         <li style="margin-bottom: 5px; padding: 5px; border-radius: 5px; text-align: center;">
                             <a style="text-decoration: none; color: black; display: block; background-color: #eee; padding: 5px 0;"
-                               href="#">Staff</a>
+                               href="@Url.Action("Staff","Staff")">Staff</a>
                         </li>
-                        <li style="margin-bottom: 5x; padding: 5px; border-radius: 5px; text-align: center;">
+                        <li style="margin-bottom: 5px; padding: 5px; border-radius: 5px; text-align: center;">
                             <a style="text-decoration: none; color: black; display: block; background-color: #eee; padding: 5px 0;"
-                               href="#">Department</a>
+                               href="@Url.Action("Departments","Department")">Department</a>
                         </li>
                     </ul>
                 </div>
@@ -42,4 +41,3 @@
         </li>
     </ul>
 </div>
-
