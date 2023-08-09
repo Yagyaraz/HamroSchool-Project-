@@ -9,17 +9,24 @@ namespace School_Project.Controllers
 {
     public class AjaxController : Controller
     {
-        // GET: Ajax
+       
         SchoolEntities _context = new SchoolEntities();
         public class AjaxViewModel
         {
-            public int stffcount { get; set; }
+            public int studentcount { get; set; }
+            public int coursecount { get; set; }
+            public int teachercount { get; set; } 
+
+            public int staffcount { get; set; }
         }
         public JsonResult GetReport()
         {
             AjaxViewModel result = new AjaxViewModel()
             {
-                stffcount = _context.Staff.Count()
+                staffcount = _context.Staff.Count(),
+                coursecount= _context.Course.Count(),   
+                teachercount= _context.Student.Count(), 
+                studentcount= _context.Student.Count(),
             };
             return Json(result,JsonRequestBehavior.AllowGet);
         }

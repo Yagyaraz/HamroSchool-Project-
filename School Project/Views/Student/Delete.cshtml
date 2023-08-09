@@ -1,4 +1,4 @@
-﻿@model School_Project.Models.TeacherViewModel
+﻿@model School_Project.Models.StudentViewModel
 
 @{
     ViewBag.Title = "Delete";
@@ -8,9 +8,17 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>TeacherViewModel</h4>
+    <h4>StudentViewModel</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Roll_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Roll_No)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -20,27 +28,27 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Subject)
+            @Html.DisplayNameFor(model => model.Age)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Subject)
+            @Html.DisplayFor(model => model.Age)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Address)
+            @Html.DisplayNameFor(model => model.Grade)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Address)
+            @Html.DisplayFor(model => model.Grade)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Contact)
+            @Html.DisplayNameFor(model => model.Course)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Contact)
+            @Html.DisplayFor(model => model.Course)
         </dd>
 
     </dl>
@@ -49,8 +57,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Teacher")
+            <input type="submit" value="Delete" class="btn btn-outline-danger" /> |
+            @Html.ActionLink("Back to List", "student")
         </div>
     }
 </div>
