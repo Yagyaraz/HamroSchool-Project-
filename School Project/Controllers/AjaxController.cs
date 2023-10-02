@@ -18,6 +18,7 @@ namespace School_Project.Controllers
             public int teachercount { get; set; } 
 
             public int staffcount { get; set; }
+            public int departmentcount {  get; set; }
         }
         public JsonResult GetReport()
         {
@@ -25,8 +26,9 @@ namespace School_Project.Controllers
             {
                 staffcount = _context.Staff.Count(),
                 coursecount= _context.Course.Count(),   
-                teachercount= _context.Student.Count(), 
+                teachercount= _context.Teacher.Count(), 
                 studentcount= _context.Student.Count(),
+                departmentcount= _context.Department.Count(),
             };
             return Json(result,JsonRequestBehavior.AllowGet);
         }

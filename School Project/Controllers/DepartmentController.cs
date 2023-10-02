@@ -17,7 +17,7 @@ namespace School_Project.Controllers
                 Id = x.Id,
                 Name = x.Name,
                 HOD = x.HOD,
-                Contact = x.Contact,
+                Contact = (long)x.Contact,
             }).ToList();
             return View(data);
         }
@@ -46,7 +46,7 @@ namespace School_Project.Controllers
                 Id = x.Id,
                 Name = x.Name,
                 HOD = x.HOD,
-                Contact = x.Contact,
+                Contact = (long)x.Contact,
             }).FirstOrDefault();
             return View(data);
         }
@@ -67,7 +67,7 @@ namespace School_Project.Controllers
         public ActionResult Delete(int id)
         {
             var data = dpt.Department.Where(x => x.Id == id).Select(x=>new DepartmentViewModel()
-            { Id = x.Id, Name = x.Name, HOD = x.HOD, Contact = x.Contact }).FirstOrDefault();
+            { Id = x.Id, Name = x.Name, HOD = x.HOD, Contact = (long)x.Contact }).FirstOrDefault();
             return View(data);
                 
 

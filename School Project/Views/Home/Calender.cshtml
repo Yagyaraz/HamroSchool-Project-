@@ -1,0 +1,100 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>School Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .calendar {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .calendar-header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            padding: 10px;
+        }
+
+        .day {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .today {
+            background-color: #007BFF;
+            color: #fff;
+            border: 1px solid #007BFF;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="calendar">
+        <div class="calendar-header">
+            <h1>October 2023</h1>
+        </div>
+        <div class="calendar-grid" id="calendar-grid">
+            <!-- Calendar days will be dynamically generated here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<script>
+    const calendarGrid = document.getElementById('calendar-grid');
+    const currentDate = new Date();
+    const currentMonth = currentDate.getMonth();
+    const currentYear = currentDate.getFullYear();
+
+    function generateCalendar(year, month) {
+        calendarGrid.innerHTML = '';
+
+        const firstDay = new Date(year, month, 1);
+        const lastDay = new Date(year, month + 1, 0);
+
+        for (let i = 0; i < firstDay.getDay(); i++) {
+            const emptyDay = document.createElement('div');
+            emptyDay.classList.add('day');
+            calendarGrid.appendChild(emptyDay);
+        }
+
+        for (let day = 1; day <= lastDay.getDate(); day++) {
+            const calendarDay = document.createElement('div');
+            calendarDay.classList.add('day');
+            calendarDay.textContent = day;
+
+            if (year === currentYear && month === currentMonth && day === currentDate.getDate()) {
+                calendarDay.classList.add('today');
+            }
+
+            calendarGrid.appendChild(calendarDay);
+        }
+    }
+
+    generateCalendar(currentYear, currentMonth);
+</script>
+

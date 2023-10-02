@@ -16,7 +16,7 @@ namespace School_Project.Controllers
             {
                 Id= x.Id,
                 Name= x.Name,
-                Phone= x.Phone,
+                Phone = (long)x.Phone,
                 Faculty= x.Faculty,
                 Position= x.Position,
             }).ToList();
@@ -48,7 +48,7 @@ namespace School_Project.Controllers
             {
                 Id = x.Id,
                 Name = x.Name,
-                Phone = x.Phone,
+                Phone = (long)x.Phone,
                 Position = x.Position,
                 Faculty = x.Faculty,
             }).FirstOrDefault();
@@ -74,7 +74,7 @@ namespace School_Project.Controllers
             {
                 Id = x.Id,
                 Name = x.Name,
-                Phone = x.Phone,
+                Phone = (long)x.Phone,
                 Position = x.Position,
                 Faculty = x.Faculty,
             }).FirstOrDefault(); 

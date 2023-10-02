@@ -15,10 +15,10 @@ namespace School_Project
     public partial class Student
     {
         public int Id { get; set; }
-        public int Roll_No { get; set; }
+        public Nullable<int> Roll_No { get; set; }
         public string Name { get; set; }
-        public int Age { get; set; }
-        public int Grade { get; set; }
+        public Nullable<int> Age { get; set; }
+        public Nullable<int> Grade { get; set; }
         public string Course { get; set; }
     }
 }

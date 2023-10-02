@@ -15,7 +15,7 @@ namespace School_Project
     public partial class Course
     {
         public int Id { get; set; }
-        public int C_Id { get; set; }
+        public Nullable<int> C_Id { get; set; }
         public string C_NAme { get; set; }
         public Nullable<int> Credit_Hour { get; set; }
     }

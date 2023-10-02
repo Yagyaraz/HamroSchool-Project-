@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="40c299f6f87b4c20ae19a24dc2ef6da9" Name="Diagram1">
-        <EntityTypeShape EntityType="SchoolModel.Course" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SchoolModel.Department" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SchoolModel.Staff" Width="1.5" PointX="0.75" PointY="3.75" />
-        <EntityTypeShape EntityType="SchoolModel.Student" Width="1.5" PointX="2.75" PointY="3.75" />
-        <EntityTypeShape EntityType="SchoolModel.Teacher" Width="1.5" PointX="5.375" PointY="0.75" />
+      <Diagram DiagramId="f1a8f0db1063475bb6e84eaac7a7a3d2" Name="Diagram1">
+        <EntityTypeShape EntityType="SchoolModel.Course" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolModel.Department" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolModel.Staff" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolModel.Student" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolModel.Teacher" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

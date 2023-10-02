@@ -17,6 +17,6 @@ namespace School_Project
         public int Id { get; set; }
         public string Name { get; set; }
         public string HOD { get; set; }
-        public long Contact { get; set; }
+        public Nullable<long> Contact { get; set; }
     }
 }

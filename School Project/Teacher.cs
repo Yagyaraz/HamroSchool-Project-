@@ -18,6 +18,6 @@ namespace School_Project
         public string Name { get; set; }
         public string Subject { get; set; }
         public string Address { get; set; }
-        public long Contact { get; set; }
+        public Nullable<long> Contact { get; set; }
     }
 }

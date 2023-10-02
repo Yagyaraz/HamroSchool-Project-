@@ -15,11 +15,11 @@ namespace School_Project.Controllers
                 var data = std.Student.Select(x => new StudentViewModel()
                 {
                     Id = x.Id,
-                    Roll_No = x.Roll_No,
+                    Roll_No = (int)x.Roll_No,
                     Name = x.Name,
-                    Age = x.Age,
+                    Age = (int)x.Age,
                     Course = x.Course,
-                    Grade = x.Grade,
+                    Grade = (int)x.Grade,
                 }).ToList();
                 return View(data);
             }
@@ -51,11 +51,11 @@ namespace School_Project.Controllers
             var data=std.Student.Where(x=>x.Id==id).Select(x=>new StudentViewModel()
             {
                 Id = x.Id,
-                Roll_No = x.Roll_No,
+                Roll_No = (int)x.Roll_No,
                 Name = x.Name,
-                Age = x.Age,
+                Age = (int)x.Age,
                 Course = x.Course,
-                Grade = x.Grade,
+                Grade = (int)x.Grade,
 
             }).FirstOrDefault();
             return View(data);  
@@ -81,11 +81,11 @@ namespace School_Project.Controllers
             var data = std.Student.Where(x => x.Id == id).Select(x => new StudentViewModel()
             {
                 Id = x.Id,
-                Roll_No = x.Roll_No,
+                Roll_No = (int)x.Roll_No,
                 Name = x.Name,
-                Age = x.Age,
+                Age = (int)x.Age,
                 Course = x.Course,
-                Grade = x.Grade,
+                Grade = (int)x.Grade,
 
             }).FirstOrDefault();
             return View(data);

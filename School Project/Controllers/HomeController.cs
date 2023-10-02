@@ -9,7 +9,7 @@ namespace School_Project.Controllers
 {
     public class HomeController : Controller
     {
-       public ActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
@@ -20,6 +20,18 @@ namespace School_Project.Controllers
         }
 
         public ActionResult Contact()
+        {
+            return View();
+        }
+        public ActionResult Introduction()
+        {
+            return View();
+        }
+        public ActionResult Calender()
+        {
+            return View();
+        }
+        public ActionResult Gallery()
         {
             return View();
         }

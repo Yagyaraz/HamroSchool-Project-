@@ -16,7 +16,7 @@ namespace School_Project.Controllers
             {
                 Id = X.Id,
                 Name = X.Name,
-                Contact=X.Contact,
+                Contact = (long)X.Contact,
                 Subject=X.Subject,
                 Address=X.Address,
             }).ToList();
@@ -51,7 +51,7 @@ namespace School_Project.Controllers
             {
                 Id = x.Id,
                 Name = x.Name,
-                Contact = x.Contact,
+                Contact = (long)x.Contact,
                 Subject = x.Subject,
                 Address = x.Address,
             }).FirstOrDefault();
@@ -76,7 +76,7 @@ namespace School_Project.Controllers
             var tech = tch.Teacher.Where(x => x.Id == id).Select(x => new TeacherViewModel()
             {
                 Name = x.Name,
-                Contact = x.Contact,
+                Contact = (long)x.Contact,
                 Subject = x.Subject,
                 Address = x.Address,
 

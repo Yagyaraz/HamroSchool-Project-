@@ -7,6 +7,8 @@ using System.Web.Mvc;
 
 namespace School_Project.Controllers
 {
+    [Authorize]
+    [AllowAnonymous]
     public class CourseController : Controller
     {
         SchoolEntities crs = new SchoolEntities();
@@ -17,10 +19,10 @@ namespace School_Project.Controllers
                 Id = x.Id,
                 C_NAme=x.C_NAme,
                 Credit_Hour=x.Credit_Hour,
-                C_Id=x.C_Id,
             }).ToList();
             return View(data);
         }
+        [Authorize]
         [HttpGet]
         public ActionResult AddCourse()
         {
@@ -39,6 +41,7 @@ namespace School_Project.Controllers
             crs.SaveChanges();
             return RedirectToAction("Course");
         }
+        [Authorize]
         [HttpGet]
         public ActionResult Edit(int id) 
         {
@@ -46,7 +49,6 @@ namespace School_Project.Controllers
             {
                 Id = x.Id,
                 Credit_Hour = x.Credit_Hour,
-                C_Id = x.C_Id,
                 C_NAme = x.C_NAme,
             }).FirstOrDefault();
             return View(data);
@@ -65,13 +67,13 @@ namespace School_Project.Controllers
 
         }
         [HttpGet]
+        [Authorize]
         public ActionResult Delete(int id)
         {
             var data = crs.Course.Where(x => x.Id == id).Select(x => new CourseViewModel()
             {
                 Id = x.Id,
                 Credit_Hour = x.Credit_Hour,
-                C_Id = x.C_Id,
                 C_NAme = x.C_NAme,
             }).FirstOrDefault();
             return View(data);
