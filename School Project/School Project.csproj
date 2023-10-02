@@ -2305,8 +2305,6 @@
     <Content Include="Views\Student\AddStudent.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Student\Delete.cshtml" />
-    <Content Include="SomePages\AboutUs.cshtml" />
-    <Content Include="SomePages\ContactUs.cshtml" />
     <Content Include="Views\Staff\Staff.cshtml" />
     <Content Include="Views\Staff\AddStaff.cshtml" />
     <Content Include="Views\Staff\Edit.cshtml" />
